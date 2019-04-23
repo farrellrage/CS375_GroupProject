@@ -5,7 +5,14 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <vector>
 
 using namespace std;
+
+const int DIVIDER_WIDTH = 80;
+const int SUB_DIVIDER_WIDTH = 40;
+
+const char DIVIDER_CHAR = '*';
+const char SUB_DIVIDER_CHAR = '-';
 
 #endif // !Main_h
