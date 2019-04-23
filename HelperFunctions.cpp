@@ -42,7 +42,7 @@ void PrintDivider(ostream& out, int length, char character)
 //	centerWidth:
 //		Width that the given message will be centered over
 //------------------------------------------------------------------------------
-void PrintCenteredMessage(ostream& fout, string message, int centerWidth)
+void PrintCenteredMessage(ostream& out, string message, int centerWidth)
 {
 	//Holds the value that will center the given message on the given width
 	int centerOfScreen;
