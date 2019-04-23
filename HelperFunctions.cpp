@@ -1,6 +1,21 @@
 #include "HelperFunctions.h"
 
 //------------------------------------------------------------------------------
+//PrintDividerToConsole: Outputs a divider line to the console
+//--------------------------------------
+//	length:
+//		Length that the divider will be printed as
+//	character:
+//		Character that the divider will be consisted of
+//------------------------------------------------------------------------------
+void PrintDividerToConsole(int length, char character)
+{
+	// Output a divider line to the console
+	cout << setw(length) << setfill(character) << character << setfill(' ')
+		<< endl;
+} // !PrintDividerToConsole
+
+//------------------------------------------------------------------------------
 //PrintDivider: Outputs a divider line to a designated location
 //--------------------------------------
 //	fout:
@@ -13,7 +28,8 @@
 void PrintDivider(ofstream& fout, int length, char character)
 {
 	// Output a divider line to the specified destination
-	fout << setw(length) << setfill(character) << character << setfill(' ') << endl;
+	fout << setw(length) << setfill(character) << character << setfill(' ')
+		<< endl;
 } // !PrintDivider
 
 //------------------------------------------------------------------------------

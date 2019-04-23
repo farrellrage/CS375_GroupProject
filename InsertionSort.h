@@ -1,5 +1,10 @@
+#ifndef InsertionSort_h
+#define InsertionSort_h
+
+#include "Main.h"
+#include "HelperFunctions.h"
+
 //------------------------------------------------------------------------------
-//Insertion Sort
 //	Insertion Sort looks at each element in the given array and determines
 //	whether they are in the correct position by comparing them to the element
 //	before them.
@@ -8,13 +13,13 @@
 //	after their current position.
 //	The given element is then inserted at the position freed up by the shifted
 //	elements.
-//	Sorts in ascending order
+//	Sorts in ascending order.
+//--------------------------------------
+//	data:
+//		Array containing the data to sort, of the same data type as "type".
+//	length:
+//		Length of the "data" array.
 //------------------------------------------------------------------------------
-#ifndef InsertionSort_h
-#define InsertionSort_h
-
-#include "Main.h"
-
 template <typename type>
 void InsertionSort(type data[], int length)
 {

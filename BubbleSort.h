@@ -1,17 +1,22 @@
+#ifndef BubbleSort_h
+#define BubbleSort_h
+
+#include "Main.h"
+#include "HelperFunctions.h"
+
 //------------------------------------------------------------------------------
-//Bubble Sort
 //	Bubble sort iterates through every element in the array, comparing two
 //	consecutive elements at a time and swapping them if the first element
 //	is larger than the second.
 //	Every pass through the array, the last element of the previous pass is
 //	ignored because it will have been "bubbled" up to its correct location.
 //	Sorts in ascending order.
+//--------------------------------------
+//	data:
+//		Array containing the data to sort, of the same data type as "type".
+//	length:
+//		Length of the "data" array.
 //------------------------------------------------------------------------------
-#ifndef BubbleSort_h
-#define BubbleSort_h
-
-#include "Main.h"
-
 template <typename type>
 void BubbleSort(type data[], int length)
 {
