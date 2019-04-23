@@ -7,7 +7,7 @@
 #include "RandomizedQuickSort.h"
 
 
-const int NUMBER_OF_NUMBERS = 20000;//20,000
+const int NUMBER_OF_NUMBERS = 51200;//51,200
 
 void InputNumbers(string inputFile, int theArray[]);
 
@@ -92,12 +92,54 @@ int main(int argc, char** argv)
 		InputNumbers("Descending.txt", descendingArray);
 		InputNumbers("random.txt", randomArray);
 		InputNumbers("RandomWithRepeats.txt", randomWithRepeatArray);
+
+
 		//insert
+		start = chrono::system_clock::now();
 		InsertionSort(sameValueArray, NUMBER_OF_NUMBERS);
+		end = chrono::system_clock::now();
+		overAllTime = end - start;
+		cout << "Insertion Sort All Same Value" << endl;
+		cout << overAllTime.count() << endl;
+
+
+
+
+		start = chrono::system_clock::now();
 		InsertionSort(ascendingArray, NUMBER_OF_NUMBERS);
+		end = chrono::system_clock::now();
+		overAllTime = end - start;
+		cout << "Insertion Sort Ascending" << endl;
+		cout << overAllTime.count() << endl;
+
+
+
+		start = chrono::system_clock::now();
 		InsertionSort(descendingArray, NUMBER_OF_NUMBERS);
+		end = chrono::system_clock::now();
+		overAllTime = end - start;
+		cout << "Insertion Sort Descending" << endl;
+		cout << overAllTime.count() << endl;
+
+
+
+
+		start = chrono::system_clock::now();
 		InsertionSort(randomArray, NUMBER_OF_NUMBERS);
+		end = chrono::system_clock::now();
+		overAllTime = end - start;
+		cout << "Insertion Sort Random" << endl;
+		cout << overAllTime.count() << endl;
+
+
+
+
+		start = chrono::system_clock::now();
 		InsertionSort(randomWithRepeatArray, NUMBER_OF_NUMBERS);
+		end = chrono::system_clock::now();
+		overAllTime = end - start;
+		cout << "Insertion Sort Random with Repeats" << endl;
+		cout << overAllTime.count() << endl;
 
 	return 0;
 	
