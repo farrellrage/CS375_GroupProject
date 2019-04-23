@@ -7,7 +7,8 @@
 #include "RandomizedQuickSort.h"
 
 
-const int NUMBER_OF_NUMBERS = 51200;//51,200
+const int NUMBER_OF_NUMBERS = 200000;
+//51,200
 
 void InputNumbers(string inputFile, int theArray[]);
 
@@ -19,32 +20,20 @@ void OutputRandomWithRepeatNumbers();
 
 int main(int argc, char** argv)
 {
+	chrono::time_point<chrono::system_clock> start;
+	chrono::time_point<chrono::system_clock> end;
+
 	OutputRandomNumbers();
 		OutputAscendingNumbers();
 		OutputDescendingNumbers();
 		OutputSameNumber();
 		OutputRandomWithRepeatNumbers();
 
-		//set the running time positions 
-		chrono::time_point<chrono::system_clock> start;
-		chrono::time_point<chrono::system_clock> end;
-		
-		int sameValueArray[NUMBER_OF_NUMBERS];
-		int ascendingArray[NUMBER_OF_NUMBERS];
-		int descendingArray[NUMBER_OF_NUMBERS];
-		int randomArray[NUMBER_OF_NUMBERS];
-		int randomWithRepeatArray[NUMBER_OF_NUMBERS];
-		
-		//First time called
-		InputNumbers("AllSameValue.txt", sameValueArray);
-		InputNumbers("Ascending.txt", ascendingArray);
-		InputNumbers("Descending.txt", descendingArray);
-		InputNumbers("random.txt", randomArray);
-		InputNumbers("RandomWithRepeats.txt", randomWithRepeatArray);
-		//bubble
+		int theArray[NUMBER_OF_NUMBERS];
 
+		InputNumbers("AllSameValue.txt", theArray);
 		start = chrono::system_clock::now();
-		BubbleSort(sameValueArray,NUMBER_OF_NUMBERS);
+		BubbleSort(theArray,NUMBER_OF_NUMBERS);
 		end = chrono::system_clock::now();
 		chrono::duration<double> overAllTime = end - start;
 		cout << "Bubble Sort All Same Value" << endl;
@@ -52,94 +41,185 @@ int main(int argc, char** argv)
 
 
 
+
+
+
+
+
+
+
+
+
+
+		InputNumbers("Ascending.txt", theArray);
 		start = chrono::system_clock::now();
-		BubbleSort(ascendingArray, NUMBER_OF_NUMBERS);
+		BubbleSort(theArray, NUMBER_OF_NUMBERS);
 		end = chrono::system_clock::now();
 		overAllTime = end - start;
 		cout << "Bubble Sort Ascending" << endl;
 		cout << overAllTime.count() << endl;
 
 
+
+
+
+
+
+		InputNumbers("Descending.txt", theArray);
 		start = chrono::system_clock::now();
-		BubbleSort(descendingArray, NUMBER_OF_NUMBERS);
+		BubbleSort(theArray, NUMBER_OF_NUMBERS);
 		end = chrono::system_clock::now();
-		overAllTime = end - start;
+		 overAllTime = end - start;
 		cout << "Bubble Sort Descending" << endl;
 		cout << overAllTime.count() << endl;
 
 
 
+
+
+
+		InputNumbers("random.txt", theArray);
 		start = chrono::system_clock::now();
-		BubbleSort(randomArray, NUMBER_OF_NUMBERS);
+		BubbleSort(theArray, NUMBER_OF_NUMBERS);
 		end = chrono::system_clock::now();
-		overAllTime = end - start;
+		 overAllTime = end - start;
 		cout << "Bubble Sort Random" << endl;
 		cout << overAllTime.count() << endl;
 
 
 
+
+
+
+		InputNumbers("RandomWithRepeats.txt", theArray);
 		start = chrono::system_clock::now();
-		BubbleSort(randomWithRepeatArray, NUMBER_OF_NUMBERS);
+		BubbleSort(theArray, NUMBER_OF_NUMBERS);
 		end = chrono::system_clock::now();
-		overAllTime = end - start;
-		cout << "Bubble Sort Random with Repeats" << endl;
-		cout << overAllTime.count() << endl;
-
-		//--------------------------------------------------------------------------------------------------------------------------------
-		//Second time called
-		InputNumbers("AllSameValue.txt", sameValueArray);
-		InputNumbers("Ascending.txt", ascendingArray);
-		InputNumbers("Descending.txt", descendingArray);
-		InputNumbers("random.txt", randomArray);
-		InputNumbers("RandomWithRepeats.txt", randomWithRepeatArray);
-
-
-		//insert
-		start = chrono::system_clock::now();
-		InsertionSort(sameValueArray, NUMBER_OF_NUMBERS);
-		end = chrono::system_clock::now();
-		overAllTime = end - start;
-		cout << "Insertion Sort All Same Value" << endl;
+		 overAllTime = end - start;
+		cout << "Bubble Sort Random With Repeats" << endl;
 		cout << overAllTime.count() << endl;
 
 
 
 
-		start = chrono::system_clock::now();
-		InsertionSort(ascendingArray, NUMBER_OF_NUMBERS);
-		end = chrono::system_clock::now();
-		overAllTime = end - start;
-		cout << "Insertion Sort Ascending" << endl;
-		cout << overAllTime.count() << endl;
 
 
 
-		start = chrono::system_clock::now();
-		InsertionSort(descendingArray, NUMBER_OF_NUMBERS);
-		end = chrono::system_clock::now();
-		overAllTime = end - start;
-		cout << "Insertion Sort Descending" << endl;
-		cout << overAllTime.count() << endl;
+		////set the running time positions 
+		//chrono::time_point<chrono::system_clock> start;
+		//chrono::time_point<chrono::system_clock> end;
+		//
+		//int sameValueArray[NUMBER_OF_NUMBERS];
+		//int ascendingArray[NUMBER_OF_NUMBERS];
+		//int descendingArray[NUMBER_OF_NUMBERS];
+		//int randomArray[NUMBER_OF_NUMBERS];
+		//int randomWithRepeatArray[NUMBER_OF_NUMBERS];
+		//
+		////First time called
+		//InputNumbers("AllSameValue.txt", sameValueArray);
+		//InputNumbers("Ascending.txt", ascendingArray);
+		//InputNumbers("Descending.txt", descendingArray);
+		//InputNumbers("random.txt", randomArray);
+		//InputNumbers("RandomWithRepeats.txt", randomWithRepeatArray);
+		////bubble
+
+		//start = chrono::system_clock::now();
+		//BubbleSort(sameValueArray,NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//chrono::duration<double> overAllTime = end - start;
+		//cout << "Bubble Sort All Same Value" << endl;
+		//cout << overAllTime.count() << endl;
+
+
+
+		//start = chrono::system_clock::now();
+		//BubbleSort(ascendingArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Bubble Sort Ascending" << endl;
+		//cout << overAllTime.count() << endl;
+
+
+		//start = chrono::system_clock::now();
+		//BubbleSort(descendingArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Bubble Sort Descending" << endl;
+		//cout << overAllTime.count() << endl;
+
+
+
+		//start = chrono::system_clock::now();
+		//BubbleSort(randomArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Bubble Sort Random" << endl;
+		//cout << overAllTime.count() << endl;
+
+
+
+		//start = chrono::system_clock::now();
+		//BubbleSort(randomWithRepeatArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Bubble Sort Random with Repeats" << endl;
+		//cout << overAllTime.count() << endl;
+
+		////--------------------------------------------------------------------------------------------------------------------------------
+		////Second time called
+		//InputNumbers("AllSameValue.txt", sameValueArray);
+		//InputNumbers("Ascending.txt", ascendingArray);
+		//InputNumbers("Descending.txt", descendingArray);
+		//InputNumbers("random.txt", randomArray);
+		//InputNumbers("RandomWithRepeats.txt", randomWithRepeatArray);
+
+
+		////insert
+		//start = chrono::system_clock::now();
+		//InsertionSort(sameValueArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Insertion Sort All Same Value" << endl;
+		//cout << overAllTime.count() << endl;
 
 
 
 
-		start = chrono::system_clock::now();
-		InsertionSort(randomArray, NUMBER_OF_NUMBERS);
-		end = chrono::system_clock::now();
-		overAllTime = end - start;
-		cout << "Insertion Sort Random" << endl;
-		cout << overAllTime.count() << endl;
+		//start = chrono::system_clock::now();
+		//InsertionSort(ascendingArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Insertion Sort Ascending" << endl;
+		//cout << overAllTime.count() << endl;
+
+
+
+		//start = chrono::system_clock::now();
+		//InsertionSort(descendingArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Insertion Sort Descending" << endl;
+		//cout << overAllTime.count() << endl;
 
 
 
 
-		start = chrono::system_clock::now();
-		InsertionSort(randomWithRepeatArray, NUMBER_OF_NUMBERS);
-		end = chrono::system_clock::now();
-		overAllTime = end - start;
-		cout << "Insertion Sort Random with Repeats" << endl;
-		cout << overAllTime.count() << endl;
+		//start = chrono::system_clock::now();
+		//InsertionSort(randomArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Insertion Sort Random" << endl;
+		//cout << overAllTime.count() << endl;
+
+
+
+
+		//start = chrono::system_clock::now();
+		//InsertionSort(randomWithRepeatArray, NUMBER_OF_NUMBERS);
+		//end = chrono::system_clock::now();
+		//overAllTime = end - start;
+		//cout << "Insertion Sort Random with Repeats" << endl;
+		//cout << overAllTime.count() << endl;
 
 	return 0;
 	
