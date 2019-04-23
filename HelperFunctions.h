@@ -53,8 +53,8 @@ void PrintArrayToConsole(type data[], int length)
 	{
 		//Output error message to the console
 		PrintDividerToConsole(DIVIDER_WIDTH, ERROR_DIVIDER_CHAR);
-		PrintCenteredMessage((ofstream&)cout, "Error - empty array",
-			DIVIDER_WIDTH);
+		PrintCenteredMessage(static_cast<ofstream&>(cout),
+			"Error - empty array", DIVIDER_WIDTH);
 		PrintDividerToConsole(DIVIDER_WIDTH, ERROR_DIVIDER_CHAR);
 	} // !if
 	else
