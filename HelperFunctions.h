@@ -41,9 +41,9 @@ void PrintCenteredMessage(ofstream& fout, string message, int centerWidth);
 //PrintArrayToConsole: Outputs the contents of the given array to the console
 //--------------------------------------
 //	data:
-//		
+//		Array containing the data to sort, of the same data type as "type".
 //	length:
-//		
+//		Length of the "data" array.
 //------------------------------------------------------------------------------
 template <typename type>
 void PrintArrayToConsole(type data[], int length)
@@ -53,7 +53,8 @@ void PrintArrayToConsole(type data[], int length)
 	{
 		//Output error message to the console
 		PrintDividerToConsole(DIVIDER_WIDTH, ERROR_DIVIDER_CHAR);
-		PrintCenteredMessage(cout, "Error - empty array", DIVIDER_WIDTH);
+		PrintCenteredMessage((ofstream&)cout, "Error - empty array",
+			DIVIDER_WIDTH);
 		PrintDividerToConsole(DIVIDER_WIDTH, ERROR_DIVIDER_CHAR);
 	} // !if
 	else
@@ -71,9 +72,9 @@ void PrintArrayToConsole(type data[], int length)
 //Swap: Swaps the data pointed to be the two given pointers
 //--------------------------------------
 //	first:
-//		
+//		The first element to swap, of type "type".
 //	second:
-//		
+//		The second element to swap, of type "type".
 //------------------------------------------------------------------------------
 template <typename type>
 void Swap(type* first, type* second)
