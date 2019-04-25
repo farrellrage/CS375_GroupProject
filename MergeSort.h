@@ -5,14 +5,18 @@
 #include "HelperFunctions.h"
 
 //------------------------------------------------------------------------------
-//	
+//Merge: Merges the subarrays defined by the left, middle, and right indecies
+//	into the section of the array defined by the left and right indecies.
 //--------------------------------------
 //	data:
-//		
-//	left:
 //		Array containing the data to sort, of the same data type as "type".
+//	left:
+//		Index of the data array bounding the leftmost element to consider.
+//	middle:
+//		Index of the data array indicating the middle element in the section
+//		to consider.
 //	right:
-//		Length of the "data" array.
+//		Index of the data array bounding the rightmost element to consider.
 //------------------------------------------------------------------------------
 template <typename type>
 void Merge(type data[], int left, int middle, int right)
@@ -71,36 +75,46 @@ void Merge(type data[], int left, int middle, int right)
 		mergedIndex++;
 	} // !while
 	
-	
 	//Copy any remaining values in the left subarray into the merged array
 	while (leftIndex < leftBound)
 	{
 		//Copy the current value in the left subarray into the merged array
 		data[mergedIndex] = leftArray[leftIndex];
 		
+		//Increment the left subarray index
+		leftIndex++;
 		
-		
-		
+		//Increment the merged array index
+		mergedIndex++;
 	} // !while
 	
-	
-	
-	
-	
-	
-	
-	
+	//Copy any remaining values in the right subarray into the merged array
+	while (rightIndex < rightBound)
+	{
+		//Copy the current value in the right subarray into the merged array
+		data[mergedIndex] = rightArray[rightIndex];
+		
+		//Increment the right subarray index
+		rightIndex++;
+		
+		//Increment the merged array index
+		mergedIndex++;
+	} // !while
 } // !Merge
 
 //------------------------------------------------------------------------------
-//	
+//MergeSort: Sorts the given data array by dividing the array into increasingly
+//	smaller sections until each subsection only contains one element.
+//	The subsections are then pieced back together by ordering the elements of
+//	the subarrays until the entire array is sorted.
+//	Sorts in-place within the given data array.
 //--------------------------------------
 //	data:
-//		
-//	left:
 //		Array containing the data to sort, of the same data type as "type".
+//	left:
+//		Index of the data array bounding the leftmost element to consider.
 //	right:
-//		Length of the "data" array.
+//		Index of the data array bounding the rightmost element to consider.
 //------------------------------------------------------------------------------
 template <typename type>
 void MergeSort(type data[], int left, int right)
@@ -121,8 +135,4 @@ void MergeSort(type data[], int left, int right)
 		Merge(data, left, middle, right);
 	} // !if
 } // !MergeSort
-
-
-
-
 #endif // !MergeSort_h

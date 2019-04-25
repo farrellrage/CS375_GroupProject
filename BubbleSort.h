@@ -5,7 +5,7 @@
 #include "HelperFunctions.h"
 
 //------------------------------------------------------------------------------
-//	Bubble sort iterates through every element in the array, comparing two
+//BubbleSort: Iterates through every element in the array, comparing two
 //	consecutive elements at a time and swapping them if the first element
 //	is larger than the second.
 //	Every pass through the array, the last element of the previous pass is

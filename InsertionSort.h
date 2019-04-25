@@ -5,7 +5,7 @@
 #include "HelperFunctions.h"
 
 //------------------------------------------------------------------------------
-//	Insertion Sort looks at each element in the given array and determines
+//InsertionSort: Looks at each element in the given array and determines
 //	whether they are in the correct position by comparing them to the element
 //	before them.
 //	If a given element is smaller than the previous element, then all previous
