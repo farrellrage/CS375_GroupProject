@@ -21,13 +21,26 @@
 template <typename type>
 void Merge(type data[], int left, int middle, int right)
 {
+	//Index that iterates over elements in the left subarray
 	int leftIndex;
+	
+	//Index that iterates over elements in the right subarray
 	int rightIndex;
+	
+	//Index that points to the next space to add an element to in the merged
+	//array
 	int mergedIndex;
+	
+	//The max value that leftIndex can reach: the length of the left subarray
 	int leftBound = ((middle - left) + 1);
+	
+	//The max value that rightIndex can reach: the length of the right subarray
 	int rightBound = (right - middle);
 	
+	//The left subarray of elements to merge
 	vector<type> leftArray;
+	
+	//The right subarray of elements to merge
 	vector<type> rightArray;
 	
 	//Copy data into the left subarray
@@ -119,6 +132,7 @@ void Merge(type data[], int left, int middle, int right)
 template <typename type>
 void MergeSort(type data[], int left, int right)
 {
+	//Holds the index of the middle of the data array
 	int middle;
 	
 	//Determine whether there is more than one element in the given array
