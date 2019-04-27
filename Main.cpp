@@ -82,8 +82,36 @@ int main(int argc, char** argv)
 		InputNumbers("RandomWithRepeats.txt", theArray);
 		RunAndOutputTheSorts(theArray, "Insertion Sort", "Random Order With Repeat Numbers");
 
+		//Quick sort----------------------------------------------------------------------
+		//InputNumbers("AllSameValue.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Quick Sort", "All Same Value");
 
+		//InputNumbers("Ascending.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Quick Sort", "Ascending Order");
 
+		//InputNumbers("Descending.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Quick Sort", "Descending Order");
+
+		//InputNumbers("random.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Quick Sort", "Random Order");
+
+		//InputNumbers("RandomWithRepeats.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Quick Sort", "Random Order With Repeat Numbers");
+		//Randomized Quick Sort-------------------------------------------------------------
+		//InputNumbers("AllSameValue.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "All Same Value");
+
+		//InputNumbers("Ascending.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "Ascending Order");
+
+		//InputNumbers("Descending.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "Descending Order");
+
+		//InputNumbers("random.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "Random Order");
+
+		//InputNumbers("RandomWithRepeats.txt", theArray);
+		//RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "Random Order With Repeat Numbers");
 
 		
 	return 0;
