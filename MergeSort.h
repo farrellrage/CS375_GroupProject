@@ -130,7 +130,7 @@ void Merge(type data[], int left, int middle, int right)
 //		Index of the data array bounding the rightmost element to consider.
 //------------------------------------------------------------------------------
 template <typename type>
-void MergeSort(type data[], int left, int right)
+void MergeSort(type data[], int left, int right, int& count)
 {
 	//Holds the index of the middle of the data array
 	int middle;
@@ -142,8 +142,8 @@ void MergeSort(type data[], int left, int right)
 		middle = ((left + (right - 1)) / 2);
 		
 		//Sort the two halves of the array
-		MergeSort(data, left, middle);
-		MergeSort(data, (middle + 1), right);
+		MergeSort(data, left, middle, count);
+		MergeSort(data, (middle + 1), right, count);
 		
 		//Merge the to halves of the array
 		Merge(data, left, middle, right);

@@ -19,7 +19,7 @@
 //		Index of the data array bounding the rightmost element to consider.
 //------------------------------------------------------------------------------
 template <typename type>
-void QuickSort(type data[], int left, int right)
+void QuickSort(type data[], int left, int right, int& counter)
 {
 	//Holds the partition index to sort across
 	int partition;

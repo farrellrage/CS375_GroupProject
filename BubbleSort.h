@@ -18,7 +18,7 @@
 //		Length of the "data" array.
 //------------------------------------------------------------------------------
 template <typename type>
-void BubbleSort(type data[], int length)
+void BubbleSort(type data[], int length, int& count)
 {
 	type temp;
 

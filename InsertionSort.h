@@ -21,7 +21,7 @@
 //		Length of the "data" array.
 //------------------------------------------------------------------------------
 template <typename type>
-void InsertionSort(type data[], int length)
+void InsertionSort(type data[], int length, int& counter)
 {
 	type key;
 	int sortLocation;
