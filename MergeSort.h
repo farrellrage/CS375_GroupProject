@@ -135,6 +135,7 @@ void MergeSort(type data[], int left, int right, int& count)
 	//Holds the index of the middle of the data array
 	int middle;
 	
+	count++;
 	//Determine whether there is more than one element in the given array
 	if (left < right)
 	{

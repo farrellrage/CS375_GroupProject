@@ -31,6 +31,7 @@ void BubbleSort(type data[], int length, int& count)
 		{
 			//Determine whether the current element is larger than the
 			//next element
+
 			if (data[elem - 1] > data[elem])
 			{
 				//Save the current element
@@ -43,6 +44,7 @@ void BubbleSort(type data[], int length, int& count)
 				//Save the first and larger element into the next array position
 				data[elem] = temp;
 			} // !if
+			count++;
 		} // !for
 	} // !for
 } // !BubbleSort

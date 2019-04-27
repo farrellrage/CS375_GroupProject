@@ -7,8 +7,7 @@
 #include "RandomizedQuickSort.h"
 
 
-const int NUMBER_OF_NUMBERS = 200000;
-//51,200
+const int NUMBER_OF_NUMBERS = 40000;//40,000
 
 void InputNumbers(string inputFile, int theArray[]);
 
@@ -49,8 +48,10 @@ int main(int argc, char** argv)
 		InputNumbers("RandomWithRepeats.txt", theArray);
 		RunAndOutputTheSorts(theArray, "Bubble Sort", "Random Order With Repeat Numbers");
 
+		PrintDividerToConsole(100, '*');
+
 		//Merge Sort-------------------------------------------------------------------------
-		InputNumbers("AllSameValue.txt", theArray);
+		/*InputNumbers("AllSameValue.txt", theArray);
 		RunAndOutputTheSorts(theArray, "Merge Sort", "All Same Value");
 
 		InputNumbers("Ascending.txt", theArray);
@@ -63,7 +64,7 @@ int main(int argc, char** argv)
 		RunAndOutputTheSorts(theArray,  "Merge Sort", "Random Order");
 
 		InputNumbers("RandomWithRepeats.txt", theArray);
-		RunAndOutputTheSorts(theArray, "Merge Sort", "Random Order With Repeat Numbers");
+		RunAndOutputTheSorts(theArray, "Merge Sort", "Random Order With Repeat Numbers");*/
 
 		//Insertion Sort---------------------------------------------------------------------
 		InputNumbers("AllSameValue.txt", theArray);

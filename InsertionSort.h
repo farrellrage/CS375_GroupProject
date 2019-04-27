@@ -21,7 +21,7 @@
 //		Length of the "data" array.
 //------------------------------------------------------------------------------
 template <typename type>
-void InsertionSort(type data[], int length, int& counter)
+void InsertionSort(type data[], int length, int& count)
 {
 	type key;
 	int sortLocation;
@@ -53,9 +53,7 @@ void InsertionSort(type data[], int length, int& counter)
 		//Start at position 1 in the array since the array is technically sorted
 		//up to position 0
 		//For each element in the array
-		for (int currentPosition = 1;
-			currentPosition < length;
-			currentPosition++)
+		for (int currentPosition = 1;currentPosition < length;currentPosition++)
 		{
 			//Save the current array element, which should be the next unsorted
 			//element
@@ -70,6 +68,7 @@ void InsertionSort(type data[], int length, int& counter)
 			//value to one position ahead of their current position
 			while ((sortLocation >= 0) && (data[sortLocation] > key))
 			{
+				count++;
 				//Move the element at the current sort location to the next
 				//position after it
 				data[sortLocation + 1] = data[sortLocation];
