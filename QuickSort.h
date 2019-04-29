@@ -18,14 +18,14 @@ template <typename type>
 int Partition(type data[], int left, int right)
 {
 	//Get the middle element of the array as the pivot element
-	int pivot = data[floor((left + right) / 2)];
+	int pivot = data[(int)(floor((left + right) / 2))];
 	
 	//Index to maintain the space in the array to swap with any other element in
 	//the array that is smaller than the pivot element
 	int swapIndex = left;
 	
 	int lowIndex = left;
-	int highIndex = (floor((left + right) / 2) + 1);
+	int highIndex = ((int)(floor((left + right) / 2) + 1));
 	
 	//For each element in the array
 	for (int index = left; index < right; index++)
@@ -35,17 +35,16 @@ int Partition(type data[], int left, int right)
 		if (data[index] <= pivot)
 		{
 			//Swap the current element with the element at the swap location
+			swap(data[swapIndex], data[index]);
 			
-			
-			
-			
+			//Increment the swap index
+			swapIndex++;
 		} // !if
-		
-		
-		
-		
 	} // !for
 	
+	swap(data[swapIndex], data[right]);
+	
+	return swapIndex;
 } // !Partition
 
 //------------------------------------------------------------------------------
@@ -69,7 +68,10 @@ void QuickSort(type data[], int left, int right)
 	if (left < right)
 	{
 		//Calculate the middle element 	of the array to be the pivot
-		partition = 
+		partition = Partition(data, left, right);
+		
+		QuickSort(data, left, partition - 1);
+		QuickSort(data, partition + 1, right);
 	} // !if
 } // !QuickSort
 

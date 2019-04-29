@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <fstream>
 #include <vector>
+#include <tgmath.h>
 
 using namespace std;
 

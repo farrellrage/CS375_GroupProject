@@ -63,8 +63,15 @@ void PrintArrayToConsole(type data[], int length)
 		for (int index = 0; index < length; index++)
 		{
 			//Output the current element to the console
-			cout << data[index] << endl;
+			cout << data[index] << ' ';
+			
+			if (((index + 1) % 10) == 0)
+			{
+				cout << endl;
+			} // !if
 		} // !for
+		
+		cout << endl;
 	} // !else
 } // !PrintArrayToConsole
 
