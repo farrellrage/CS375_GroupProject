@@ -24,10 +24,22 @@ int Partition(type data[], int left, int right)
 	//the array that is smaller than the pivot element
 	int swapIndex = left;
 	
+	int lowIndex = left;
+	int highIndex = (floor((left + right) / 2) + 1);
+	
 	//For each element in the array
 	for (int index = left; index < right; index++)
 	{
-		//
+		//Determine whether the current element is greater than the pivot
+		//element
+		if (data[index] <= pivot)
+		{
+			//Swap the current element with the element at the swap location
+			
+			
+			
+			
+		} // !if
 		
 		
 		
