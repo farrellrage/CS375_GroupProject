@@ -1,11 +1,27 @@
-all:	Main.cpp Main.h HelperFunctions.o RandomizedQuickSort.o
-	g++ -g -Wall -o SortCompare Main.cpp HelperFunctions.o RandomizedQuickSort.o
+COMP = g++ -g -Wall
+DEPS = HelperFunctions.h Main.h
+HEADS = BubbleSort.h.gch InsertionSort.h.gch MergeSort.h.gch QuickSort.h.gch RandomizedQuickSort.o
 
-HelperFunctions.o:	HelperFunctions.cpp HelperFunctions.h Main.h
-	g++ -g -Wall -c HelperFunctions.cpp
+all:	Main.cpp $(DEPS) HelperFunctions.o $(HEADS)
+	$(COMP) -o SortCompare Main.cpp HelperFunctions.o RandomizedQuickSort.o
+
+HelperFunctions.o:	HelperFunctions.cpp $(DEPS)
+	$(COMP) -c HelperFunctions.cpp
+	
+BubbleSort.h.gch:	BubbleSort.h $(DEPS)
+	$(COMP) -c BubbleSort.h
+
+InsertionSort.h.gch:	InsertionSort.h $(DEPS)
+	$(COMP) -c InsertionSort.h
+
+MergeSort.h.gch:	MergeSort.h $(DEPS)
+	$(COMP) -c MergeSort.h
+	
+QuickSort.h.gch:	QuickSort.h $(DEPS)
+	$(COMP) -c QuickSort.h
 
 RandomizedQuickSort.o:	RandomizedQuickSort.cpp RandomizedQuickSort.h Main.h
-	g++ -g -Wall -c RandomizedQuickSort.cpp
+	$(COMP) -c RandomizedQuickSort.cpp
 
 clean:
-	-rm *.o SortCompare
+	-rm *.o *.gch SortCompare
