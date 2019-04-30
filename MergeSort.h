@@ -21,11 +21,13 @@
 template <typename type>
 void Merge(type data[], int left, int middle, int right)
 {
+	//cout << left << ' ' << middle << ' ' << right << endl;
 	int leftIndex;
 	int rightIndex;
 	int mergedIndex;
 	int leftBound = ((middle - left) + 1);
 	int rightBound = (right - middle);
+	//cout << leftBound << ' ' << rightBound << endl;
 	
 	vector<type> leftArray;
 	vector<type> rightArray;
@@ -34,13 +36,18 @@ void Merge(type data[], int left, int middle, int right)
 	for (leftIndex = 0; leftIndex < leftBound; leftIndex++)
 	{
 		leftArray.push_back(data[left + leftIndex]);
+		//cout << "leftArray[" << leftIndex << "] : " << leftArray[leftIndex] << endl;
 	} // !for
 	
 	//Copy data into the right subarray
-	for (rightIndex = 0; rightIndex < rightBound; rightBound++)
+	for (rightIndex = 0; rightIndex < rightBound; rightIndex++)
 	{
-		rightArray.push_back(data[middle + rightIndex + 1]);
+		//cout << "rightIndex: " << rightIndex << ", rightBound: " << rightBound << endl;
+		rightArray.push_back(data[middle + 1 + rightIndex]);
+		//cout << "rightArray[" << rightIndex << "] : " << rightArray[rightIndex] << endl;
 	} // !for
+	
+	//cout << "Got here" << endl;
 	
 	//Reinitialize array indecies
 	leftIndex = 0;
