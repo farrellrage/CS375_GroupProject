@@ -22,6 +22,12 @@ QuickSort.h.gch:	QuickSort.h $(DEPS)
 
 RandomizedQuickSort.o:	RandomizedQuickSort.cpp RandomizedQuickSort.h Main.h
 	$(COMP) -c RandomizedQuickSort.cpp
+	
+gen:	RandomNumberGenerator.cpp
+	$(COMP) -o NumGen RandomNumberGenerator.cpp
+	./NumGen
 
 clean:
-	-rm *.o *.gch SortCompare
+	-rm SortCompare NumGen
+	-rm *.o *.gch 
+	-rm AllSameValue.txt Ascending.txt Descending.txt random.txt RandomWithRepeats.txt

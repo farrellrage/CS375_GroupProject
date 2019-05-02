@@ -6,9 +6,9 @@
 #include "HelperFunctions.h"
 
 //------------------------------------------------------------------------------
-//Partition: Moves all values that are smaller than the last element in the
-//	array (the pivot) to the left side of the array and all values that are
-//	greater than the pivot to the right side of the array.
+//RandomizedPartition: Moves all values that are smaller than the last element
+//	in the array (the pivot) to the left side of the array and all values that
+//	are greater than the pivot to the right side of the array.
 //--------------------------------------
 //	data:
 //		Array containing the data to sort, of the same data type as "type".
@@ -18,7 +18,7 @@
 //		Index of the data array bounding the rightmost element to consider.
 //------------------------------------------------------------------------------
 template <typename type>
-int Partition(type data[], int left, int right)
+int RandomizedPartition(type data[], int left, int right)
 {
 	int random;
 	
@@ -27,7 +27,7 @@ int Partition(type data[], int left, int right)
 	{
 		//Assign random a random number that is less than or equal to right
 		random = (rand() % right);
-	}while(random <= right && random >= left) 
+	}while(random <= right && random >= left);
 	
 	//Get the last element of the array as the pivot element
 	int pivot = data[random];
