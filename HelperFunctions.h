@@ -38,6 +38,18 @@ void PrintDivider(ostream& out, int length, char character);
 void PrintCenteredMessage(ostream& out, string message, int centerWidth);
 
 //------------------------------------------------------------------------------
+//PrintCenteredMessage: Outputs a centered message to a designated location
+//--------------------------------------
+//	out:
+//		Output stream object that sends output to the opened output file
+//	message:
+//		String message that will be centered on the given width
+//	centerWidth:
+//		Width that the given message will be centered over
+//------------------------------------------------------------------------------
+bool VerifyAscending(int arr[], int size);
+
+//------------------------------------------------------------------------------
 //PrintArrayToConsole: Outputs the contents of the given array to the console
 //--------------------------------------
 //	data:

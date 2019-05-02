@@ -20,7 +20,7 @@ template <typename type>
 int Partition(type data[], int left, int right)
 {
 	//Get the last element of the array as the pivot element
-	int pivot = data[right - 1];
+	int pivot = data[right];
 	
 	//Index to maintain the space in the array to swap with any other element in
 	//the array that is smaller than the pivot element

@@ -53,3 +53,26 @@ void PrintCenteredMessage(ostream& out, string message, int centerWidth)
 	// Output the centered message to the specified destination
 	out << right << setw(centerOfScreen) << message << endl;
 } // !PrintCenteredMessage
+
+//------------------------------------------------------------------------------
+//VerifyAscending: Outputs a centered message to a designated location
+//--------------------------------------
+//	arr:
+//		
+//	size:
+//		
+//------------------------------------------------------------------------------
+bool VerifyAscending(int arr[], int size)
+{
+	//For each element in the array
+	for (int i = 0; i < (size - 1); i++)
+	{
+		//Determine whether the current element is larger than the next element
+		if (arr[i] > arr[i + 1])
+		{
+			return false;
+		} // !if
+	} // !for
+	
+	return true;
+} // !VerifyAscending
