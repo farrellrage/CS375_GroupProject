@@ -2,7 +2,7 @@ COMP = g++ -g -Wall
 DEPS = HelperFunctions.h Main.h
 HEADS = BubbleSort.h.gch InsertionSort.h.gch MergeSort.h.gch QuickSort.h.gch RandomizedQuickSort.o
 
-all:	Main.cpp $(DEPS) HelperFunctions.o $(HEADS)
+all:	gen Main.cpp $(DEPS) HelperFunctions.o $(HEADS) 
 	$(COMP) -o SortCompare Main.cpp HelperFunctions.o RandomizedQuickSort.o
 
 HelperFunctions.o:	HelperFunctions.cpp $(DEPS)
