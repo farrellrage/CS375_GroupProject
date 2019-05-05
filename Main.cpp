@@ -6,39 +6,88 @@
 #include "QuickSort.h"
 #include "RandomizedQuickSort.h"
 
-const int NUMBER_OF_NUMBERS = 100;//200,000
+const int NUMBER_OF_NUMBERS = 100000;
 
 void InputNumbers(string inputFile, int theArray[]);
-
-
 
 void RunAndOutputTheSorts(int theArray[], string sortToUse, string message);
 
 int main(int argc, char** argv)
 {
-	int data[NUMBER_OF_NUMBERS];
+	int theArray[NUMBER_OF_NUMBERS];
 	
-	InputNumbers("random.txt", data);
-	
-	PrintArrayToConsole(data, NUMBER_OF_NUMBERS);
-	
-	RunAndOutputTheSorts(data, "Bubble Sort", "Random Order");
-	//RunAndOutputTheSorts(data, "Insertion Sort", "Random Order");
-	//RunAndOutputTheSorts(data, "Merge Sort", "Random Order");
-	
-	
-	//RunAndOutputTheSorts(data, "Quick Sort", "Random Order");
-	//RunAndOutputTheSorts(data, "Randomized Quick Sort", "Random Order");
-	
-	PrintArrayToConsole(data, NUMBER_OF_NUMBERS);
-	
-	//BubbleSort(data, SIZE);
-	//InsertionSort(data, NUMBER_OF_NUMBERS);
-	//MergeSort(data, 0, (SIZE - 1));
-	//QuickSort(data, 0, (SIZE - 1));
-	//RandomizedQuickSort(data, 0, (SIZE - 1));
-	
-	
+	//Bubble Sort-----------------------------------------------------------------------------
+	InputNumbers("AllSameValue.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Bubble Sort", "All Same Value");
+
+	InputNumbers("Ascending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Bubble Sort", "Ascending Order");
+
+	InputNumbers("Descending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Bubble Sort", "Descending Order");
+
+	InputNumbers("random.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Bubble Sort", "Random Order");
+
+	PrintDividerToConsole(100, '*');
+
+	//Merge Sort-------------------------------------------------------------------------
+	InputNumbers("AllSameValue.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Merge Sort", "All Same Value");
+
+	InputNumbers("Ascending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Merge Sort", "Ascending Order");
+
+	InputNumbers("Descending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Merge Sort", "Descending Order");
+
+	InputNumbers("random.txt", theArray);
+	RunAndOutputTheSorts(theArray,  "Merge Sort", "Random Order");
+
+	PrintDividerToConsole(100, '*');
+
+	//Insertion Sort---------------------------------------------------------------------
+	InputNumbers("AllSameValue.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Insertion Sort", "All Same Value");
+
+	InputNumbers("Ascending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Insertion Sort", "Ascending Order");
+
+	InputNumbers("Descending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Insertion Sort", "Descending Order");
+
+	InputNumbers("random.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Insertion Sort", "Random Order");
+
+	PrintDividerToConsole(100, '*');
+
+	//Quick sort----------------------------------------------------------------------
+	InputNumbers("AllSameValue.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Quick Sort", "All Same Value");
+
+	InputNumbers("Ascending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Quick Sort", "Ascending Order");
+
+	InputNumbers("Descending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Quick Sort", "Descending Order");
+
+	InputNumbers("random.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Quick Sort", "Random Order");
+
+	PrintDividerToConsole(100, '*');
+
+	//Randomized Quick Sort-------------------------------------------------------------
+	InputNumbers("AllSameValue.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "All Same Value");
+
+	InputNumbers("Ascending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "Ascending Order");
+
+	InputNumbers("Descending.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "Descending Order");
+
+	InputNumbers("random.txt", theArray);
+	RunAndOutputTheSorts(theArray, "Randomized Quick Sort", "Random Order");
 	
 	return 0;
 } // !main
@@ -59,8 +108,6 @@ void InputNumbers(string inputFile, int theArray[])
 	}
 	fin.close();
 }
-
-
 
 void RunAndOutputTheSorts(int theArray[], string sortToUse, string message)
 {
